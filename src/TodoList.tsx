@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Todo } from "./types";
 import TodoTable from "./TodoTable";
-import Header from "./header";
+import Header from "./Header";
 
 
 function TodoList() {
@@ -33,22 +33,38 @@ function TodoList() {
 
     return (
         <>
-        <Header/>
-            <input
-                name="description"
-                placeholder="Description"
-                onChange={handleChange}
-                value={todo.description}
+            <Header />
+            <div className="TodoList">
+                <div className="table-container">
+                    <div className="border-text">Add todo:</div>          
+                    <table>
+                    <td className="TodoList-table-bottom"></td>
+                        <td className="TodoList-table-bottom">
+                            Description:
+                            <input
+                                name="description"
+                                placeholder=""
+                                onChange={handleChange}
+                                value={todo.description}
+                                size="14"
+                            />
+                            Date:
+                            <input
+                                name="date"
+                                placeholder=""
+                                onChange={handleChange}
+                                value={todo.date}
+                                size="14"
+                            />                    
+                            <button className="button-adjust" onClick={addTodo}>Add</button>
+                            
+                        </td>
+                        <td className="TodoList-table-bottom"></td>
 
-            />
-            <input
-                name="date"
-                placeholder="Date"
-                onChange={handleChange}
-                value={todo.date}
+                    </table>
 
-            />
-            <button onClick={addTodo}>Add</button>
+                </div>
+            </div>
             <TodoTable todos={todos} handleDelete={handleDelete} />
         </>
     );
