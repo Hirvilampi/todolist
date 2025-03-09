@@ -5,10 +5,31 @@
   text-align: center;
 }
 
+/* Remove table outline */
+.ag-theme-material .ag-root-wrapper {
+  border: none;
+}
+
+/* Remove cell borders */
+.ag-theme-material .ag-cell {
+  border: none;
+  border-left: 0cap;
+}
+
+/* Optional: Add more spacing between rows */
+.ag-theme-material .ag-row {
+  margin-bottom: 5px;
+}
+
+.ag-theme-material .ag-sort {
+  border: none;
+  border-color:aqua;
+}
+
 
 
 .Header table {
-  width: 550px;
+  width: 700px;
   border-collapse: collapse;
   margin-top: 10px;
 }
@@ -27,11 +48,11 @@
 }
 
 .TodoTable table {
-  width: 400px;
+  width: 550px;
   align-items: center;
   text-align: center;
   align-content: center;
-  min-width: 270px;
+
   margin-right: 10px;
   border: px solid rgb(221, 221, 221);
   border-bottom: 0cap;
@@ -86,7 +107,7 @@ table td {
 }
 
 .date-column {
-  width: 60px;
+  width: 90px;
   border-left: 2px solid white;
 }
 
