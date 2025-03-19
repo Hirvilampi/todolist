@@ -8,3 +8,7 @@ export type TodoTableProps = {
     todos: Todo[];
     handleDelete: (row: number) => void;
 }
+
+export type DayValue = {
+    date: string;
+}

@@ -81,7 +81,8 @@
 }
 
 .button-adjust {
-  margin-top: 0px;
+  margin: 2px;
+  padding: 6px;
 }
 
 .table-container {
