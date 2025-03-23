@@ -66,7 +66,8 @@ function CustomCalendarHeader(props: PickersCalendarHeaderProps<Dayjs>) {
 }
 
 
-function TodoList(props: PickersCalendarHeaderProps<Dayjs>) {
+function TodoList() {
+    console.log("TodoList component is present");
     const [todo, setTodo] = useState<Todo>({ description: '', date: '', priority: 'High' });
     const [todos, setTodos] = useState<Todo[]>([]);
     const gridRef = useRef<AgGridReact<Todo>>(null);
@@ -175,6 +176,7 @@ function TodoList(props: PickersCalendarHeaderProps<Dayjs>) {
             <Stack direction="row" spacing={1} alignItems={"center"}>
                 <TextField
                     label="Description"
+
                     type="text"
                     onChange={(e) => setTodo({ ...todo, description: e.target.value })}
                     value={todo.description}
@@ -183,6 +185,7 @@ function TodoList(props: PickersCalendarHeaderProps<Dayjs>) {
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DatePicker
                         defaultValue={dayjs('2021-01-19')}
+
                         label="date"
                         slotProps={{
                             actionBar: {
